@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figma Mobile App</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #sections
+        {
+            overflow-x: scroll;
+            overflow-y: hidden;
+            white-space: nowrap;
+        }
+        section{
+            width: 100%;
+            height: 100vh;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+        #s1 .img1{
+            position: absolute;
+            width: 368px;
+            height: 197.25px;
+            left: -4px;
+            top: 0px;           
+        }
+        #s1 .img2{
+            position: absolute;
+            width: 100%;
+            height: 456px;
+            left: 0px;
+            top: 184px;   
+        }
+        #s1 .heart{
+            position: absolute;
+            width: 95px;
+            height: 95px;
+            left: 246px;
+            top: 77px;
+        }
+        #s1 button{
+            position: absolute;
+            width: 239px;
+            height: 53.8px;
+            left: 15px;
+            top: 230px;
+            z-index: 10;
+            background: #0A7A37;
+            box-shadow: 0px 3.52768px 0px rgba(0, 0, 0, 0.25);
+            border-radius: 4.40959px;
+            color: #fff;
+            font-size: 20px;
+        }
+        #s1 h2{
+            position: absolute;
+            width: 226.47px;
+            height: 55px;
+            left: 115px;
+            top: 509px;
+
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 58.2353px;
+            line-height: 68px;
+            z-index: 10;
+            color: #FFFFFF;
+        }
+        #s1 h3{
+            position: absolute;
+            width: 140px;
+            height: 34px;
+            left: 51px;
+            top: 28px;
+
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 36px;
+            line-height: 42px;
+            z-index: 10;
+            color: #FFFFFF;
+        }
+        #s2 .header{
+            position: absolute;
+            width: 100%;
+            height: 61px;
+            left: 0px;
+            top: 0px;
+            background: #0A7A37;
+        }
+        #s2 .menu{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            left: 297px;
+            top: 3px;
+        }
+        #s2 .wheart{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            left: 15px;
+            top: 5px;
+        }
+        #s2 .group6{
+            position: absolute;
+            width: 238px;
+            height: 324px;
+            left: 65px;
+            top: 113px;
+
+        }
+        #s2 .name{
+            position: absolute;
+            width: 186px;
+            height: 27px;
+            left: 87px;
+            top: 465px;
+
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 24.12px;
+            line-height: 28px;
+
+            color: #0A7A37;
+        }
+        #s2 button{
+            position: absolute;
+            width: 195px;
+            height: 43.89px;
+            left: 82px;
+            top: 533px;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 20.6379px;
+            line-height: 24px;
+            color: #FFFFFF;
+            background: #0A7A37;
+            box-shadow: 0px 2.87823px 0px rgba(0, 0, 0, 0.25);
+            border-radius: 3.59779px;
+        }
+        #s3{
+            background: #0A7A37;
+        }
+        #s3 .close{
+            position: absolute;
+            left: 86.11%;
+            right: 5.79%;
+            top: 2.34%;
+            bottom: 93.1%;
+        }
+        #s3 .hero{
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            left: 100px;
+            top: 75px;
+            border-radius: 50%;
+        }
+        #s3 h3{
+            position: absolute;
+            width: 186px;
+            height: 27px;
+            left: 87px;
+            top: 285px;
+
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 24.12px;
+            line-height: 28px;
+
+            color: #FFFFFF;
+        }
+        #s3 .b1{
+            position: absolute;
+            width: 195px;
+            height: 43.89px;
+            left: 82px;
+            top: 345px;
+            background: #FFFFFF;
+            box-shadow: 0px 2.87823px 0px rgba(0, 0, 0, 0.25);
+            border-radius: 3.59779px;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 20.6379px;
+            line-height: 24px;
+            color: #0A7A37;
+        }
+        #s3 .b2{
+            position: absolute;
+            width: 195px;
+            height: 43.89px;
+            left: 82px;
+            top: 410px;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 20.6379px;
+            line-height: 24px;
+            color: #0A7A37;
+            background: #FFFFFF;
+            box-shadow: 0px 2.87823px 0px rgba(0, 0, 0, 0.25);
+            border-radius: 3.59779px;
+        }
+        #s3 .b3{
+            position: absolute;
+            width: 195px;
+            height: 43.89px;
+            left: 82px;
+            top: 475px;
+            background: #FFFFFF;
+            box-shadow: 0px 2.87823px 0px rgba(0, 0, 0, 0.25);
+            border-radius: 3.59779px;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 20.6379px;
+            line-height: 24px;
+            color: #0A7A37;
+            }
+    </style>
+</head>
+<body>
+    <div id="sections">
+        <section id="s1">
+            <img src="Rectangle 4.png" alt="" class="img1">
+            <h3>MeetU</h3>
+            <img src="favorite-black-18dp 1.png" alt="" class="heart">
+            <button onclick="second()">Let's Get Started</button>
+            <h2>MeetU</h2>
+            <img src="Group 5.png" alt="" class="img2">    
+        </section>
+        <section id="s2">
+            <div class="header">
+                <img src="menu-black-18dp 1.png" onclick="third()" alt="" class="menu">
+                <img src="favorite-black-18dp 2.png" alt="" onclick="first()" class="wheart">
+            </div>
+            <img src="Group 6.png" alt="" class="group6">
+            <h2 class="name">Taniya Renn , 28</h2>
+            <button>Follow</button>
+        </section>
+        <section id="s3">
+            <img src="Vector.png" alt="" onclick="second()" class="close">
+            <img src="images (1).jpeg" alt="" class="hero">
+            <h3>Tim Shril , 26</h3>
+            <button class="b1">Get Premium</button>
+            <button class="b2">Edit Details</button>
+            <button class="b3">Log Out</button>
+        </section>
+    
+    </div>
+    <script>
+        var s1 = document.getElementById("s1")
+
+        function first(){
+            s1.style.marginLeft = 0 + "%";
+        }
+        function second(){
+            s1.style.marginLeft = -101 + "%";
+        }
+        function third(){
+            s1.style.marginLeft = -202 + "%";
+        }
+    </script>
+</body>
+</html>
